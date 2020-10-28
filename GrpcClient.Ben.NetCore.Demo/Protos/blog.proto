@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService.Ben.Demo.Protos";
+// 服务blog
+service Blog {
+// 服务blog 定义的方法
+  rpc CreateBlog (CreateBlogRequest) returns (CreateBlogReply);
+  rpc CustomBlog (CustomBlogRequest) returns (CustomBlogReply);
+}
+ //方法参数
+  message CreateBlogRequest {
+    string Code  = 1;
+    string Name = 2;
+    string Title = 3;
+    string Descript = 4;
+    double NumberWord = 5;
+}
+
+//方法返回值
+message CreateBlogReply {
+  bool success = 1;
+  string requestValues=2;
+}
+
+message CustomBlogRequest{
+ string Code=1;
+ string Name =2;
+ bool IsReply=3;
+}
+
+message CustomBlogReply {
+  bool success = 1;
+  string requestValues=2;
+}
