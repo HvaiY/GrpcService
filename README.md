@@ -5,7 +5,7 @@
 ## Grpc AspNetCore 客户端(GrpcClient.Ben.NetCore.Demo)
 
 #### 完成编写proto buffer 文件接口之后直接生成 之后再写实现方法类 继承proto 生成的基类，
- (proto3语法规则)[https://developers.google.com/protocol-buffers/docs/proto3]
+ [proto3语法规则](https://developers.google.com/protocol-buffers/docs/proto3)
  - 注意需要更新工程文件 将proto 文件包含在内 下面是批量包含 
   ```
   <ItemGroup>
